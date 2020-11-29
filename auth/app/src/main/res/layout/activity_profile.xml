@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_100"
+    android:orientation="vertical"
+    android:weightSum="4">
+
+    <EditText
+        android:id="@+id/fieldName"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:autofillHints=""
+        android:hint="@string/field_namereg"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/fieldLastName"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:autofillHints=""
+        android:hint="@string/field_lastnamereg"
+        android:inputType="textPersonName" />
+
+</LinearLayout>
