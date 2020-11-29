@@ -61,6 +61,7 @@ public class EmailPasswordActivity extends BaseActivity implements
         mBinding.verifyEmailButton.setOnClickListener(this);
         mBinding.reloadButton.setOnClickListener(this);
 
+
         // [START initialize_auth]
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -194,10 +195,11 @@ public class EmailPasswordActivity extends BaseActivity implements
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
                     updateUI(mAuth.getCurrentUser());
-                    Toast.makeText(EmailPasswordActivity.this,
-                            "Обновление успешно!",
-                            Toast.LENGTH_SHORT).show();
-                } else {
+                    Toast.makeText(EmailPasswordActivity.this, "Обновление успешно!", Toast.LENGTH_SHORT).show();
+
+                }
+
+                else {
                     Log.e(TAG, "reload", task.getException());
                     Toast.makeText(EmailPasswordActivity.this,
                             "Ошибка при обновленни",
@@ -205,6 +207,11 @@ public class EmailPasswordActivity extends BaseActivity implements
                 }
             }
         });
+    }
+
+    private void start() {
+        Intent inten = new Intent(this, ProfileActivity.class);
+        startActivity(inten);
     }
 
     private boolean validateForm() {
@@ -243,10 +250,10 @@ public class EmailPasswordActivity extends BaseActivity implements
 
             if (user.isEmailVerified()) {
                 mBinding.verifyEmailButton.setVisibility(View.GONE);
-                Intent intent = new Intent(this, ProfileActivity.class);
-                startActivity(intent);
+
             } else {
                 mBinding.verifyEmailButton.setVisibility(View.VISIBLE);
+
             }
         } else {
             mBinding.status.setText(R.string.signed_out);

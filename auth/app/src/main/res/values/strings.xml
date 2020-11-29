@@ -68,7 +68,7 @@
     <string name="facebook_status_fmt">Facebook User: %s</string>
     <string name="facebook_title_text">Facebook Login</string>
 
-    <string name="emailpassword_status_fmt">Почта пользователя: %1$s (Подтвердите вашу почту)</string>
+    <string name="emailpassword_status_fmt">Почта пользователя: %1$s (подтверждена: %2$b)</string>
     <string name="emailpassword_title_text">Добро пожаловать!</string>
 
     <string name="passwordless_status_fmt">Почта пользователя: %1$s (verified: %2$b)</string>
@@ -95,7 +95,7 @@
 
     <string name="enroll_mfa">Enroll MFA</string>
     <string name="unenroll_mfa">Unenroll MFA</string>
-    <string name="reload">Готово</string>
+    <string name="reload">Обновить</string>
 
     <string name="custom_auth_signin_status_user">Ваш ID: %s</string>
     <string name="custom_auth_signin_status_failed">Ошибка: вход не выполнен</string>
@@ -105,5 +105,6 @@
 
     <string name="field_namereg">Введите ваше имя</string>
     <string name="field_lastnamereg">Введите вашу фамилию</string>
+    <string name="finish">Готово</string>
 
 </resources>
